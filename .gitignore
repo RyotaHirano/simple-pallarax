@@ -1,0 +1,6 @@
+node_modules
+.DS_Store
+dst
+src/html
+src/css
+src/images
