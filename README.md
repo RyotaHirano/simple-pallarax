@@ -1,1 +1,1 @@
-# pallarax-sample
+# simple-pallarax
