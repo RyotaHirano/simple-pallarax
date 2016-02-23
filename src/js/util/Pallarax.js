@@ -11,22 +11,23 @@ export default class Pallarax {
     this.height = $el.height();
     this.top = $el[0].offsetTop;
     this.duration = duration;
-    this.y = this.getY();
-
+    
+    const y = this.getY();
     TweenMax.set(this.$el, {
-      y: this.y
+      y: y
     });
   }
 
   getY() {
     const currentScrollTop = $(window).scrollTop();
-    this.y = -(currentScrollTop) * scaleY;
+    const y = -(currentScrollTop) * scaleY;
+    return y;
   }
 
   scroll() {
-    this.getY();
+    const y = this.getY();
     TweenMax.to(this.$el, this.duration, {
-      y: this.y
+      y: y
     });
   }
 }
